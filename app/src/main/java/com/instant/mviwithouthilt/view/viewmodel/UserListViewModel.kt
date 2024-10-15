@@ -15,7 +15,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 
-class UserListViewModel : ViewModel() {
+open class UserListViewModel : ViewModel() {
     private val repository: UserRepository = UserRepositoryImpl()
 
 

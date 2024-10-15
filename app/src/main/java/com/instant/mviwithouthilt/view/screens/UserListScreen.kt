@@ -38,6 +38,7 @@ import com.instant.mviwithouthilt.view.components.UserInput
 import com.instant.mviwithouthilt.view.components.UserItem
 import com.instant.mviwithouthilt.view.uimodel.SnackbarViewEffect
 import com.instant.mviwithouthilt.view.uimodel.UserViewIntent
+import com.instant.mviwithouthilt.view.uimodel.UserViewState
 import com.instant.mviwithouthilt.view.viewmodel.UserListViewModel
 import kotlinx.coroutines.launch
 
@@ -153,11 +154,14 @@ fun UserListScreen(userListViewModel: UserListViewModel) {
     )
 }
 
+class MockUserListViewModel : UserListViewModel()
+
 
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    val viewModel = UserListViewModel()
+    val viewModel = MockUserListViewModel() // Use mock data instead of the real ViewModel
     UserListScreen(userListViewModel = viewModel)
 }
+
 
